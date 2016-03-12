@@ -17,6 +17,5 @@ go test
 
 请参考单元测试代码`cashier_test.go`中的`func Example1~4()`使用该模块
 
-###Then
-do anything you want ~ 。~<br>
-btw: 初学golang，还望面试官手下留情
+###BTW
+初学golang，还望面试官手下留情
