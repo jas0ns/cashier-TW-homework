@@ -9,8 +9,8 @@ go install github.com/jas0ns/cashier-TW-homework
 ```
 
 ###Usage
-运行题目指定用例，请cd到源码目录下
-(默认为`$GOPATH/src/github.com/jas0ns/cashier-TW-homework/`)，运行
+运行题目指定用例，请cd到源码目录后
+(默认为`$GOPATH/src/github.com/jas0ns/cashier-TW-homework/`)运行
 ```bash
 go test
 ```
