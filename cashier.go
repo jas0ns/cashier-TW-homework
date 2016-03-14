@@ -96,8 +96,8 @@ func PrintOneShoppingItem(si *ShoppingItem) {
 		si.commodity.name, si.amount, si.commodity.unit,
 		si.commodity.price, si.subtotal)
 
-	if si.promotions_flags|DISCOUNTPROMOTIONS ==
-		si.promotions_flags {
+	if si.promotions_flags&DISCOUNTPROMOTIONS != 0 &&
+		si.promotions_flags&THREEFORTWOPROMOTIONS == 0 {
 		fmt.Printf("，节省%.2f(元)\n", si.allowance)
 	} else {
 		fmt.Println()

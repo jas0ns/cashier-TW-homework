@@ -60,6 +60,10 @@ type DiscountPromotions struct {
 
 func (dp *DiscountPromotions) PromotionsHandler(
 	si *ShoppingItem, r *Request) {
+	if si.promotions_flags&THREEFORTWOPROMOTIONS != 0 {
+		return
+	}
+
 	si.subtotal *= float64(dp.percent)
 	r.promotions_flags |= DISCOUNTPROMOTIONS
 	si.promotions_flags |= DISCOUNTPROMOTIONS

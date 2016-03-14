@@ -133,3 +133,32 @@ func Example4() {
 	// 节省：5.55(元)
 	// **********************
 }
+
+//example of conflict of ThreeForTwoPromotions and DiscountPromotions
+func Example5() {
+	comMap, input := InitExample()
+
+	*input = `
+	{"barcode" : "ITEM000003", "amount" : 3}
+	`
+
+	threeForTwoPromotions := &ThreeForTwoPromotions{}
+	discountPromotions := &DiscountPromotions{0.95}
+	(*comMap)["ITEM000003"].AddPromotions(threeForTwoPromotions)
+	(*comMap)["ITEM000003"].AddPromotions(discountPromotions)
+
+	var request Request
+	request.InitRequest(input, comMap)
+	PrintInvoice(&request)
+
+	// Output:
+	// ***<没钱赚商店>购物清单***
+	// 名称：苹果，数量：3斤，单价：5.50(元)，小计：11.00(元)
+	// ----------------------
+	// 买二赠一商品：
+	// 名称：苹果，数量：1斤
+	// ----------------------
+	// 总计：11.00(元)
+	// 节省：5.50(元)
+	// **********************
+}
