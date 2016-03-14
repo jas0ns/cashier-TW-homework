@@ -8,8 +8,8 @@ go install github.com/jas0ns/cashier-TW-homework
 ```
 
 ###Usage
-运行题目指定测试用例，请cd到源码目录后
-(默认为`$GOPATH/src/github.com/jas0ns/cashier-TW-homework/`)运行
+运行题目指定测试用例，请cd到源码目录
+(默认为`$GOPATH/src/github.com/jas0ns/cashier-TW-homework/`)后运行
 ```bash
 go test
 ```
@@ -17,7 +17,7 @@ go test
 请参考单元测试代码`cashier_test.go`中的`func Example1~5()`使用该模块
 
 ###Notice(or Bug)
-当为一个商品添加多种优惠的时候，有冲突的优惠需要按优先顺序依次添加<br>
+当为一个商品添加多种优惠的时候，有冲突的优惠需要按优先顺序依次添加，见`cashier_test.go/func Example5`<br>
 例: 需要先添加"买二赠一"，再添加"95折"，才能正确的使其只享受优先级高的优惠"买二赠一"
 
 
