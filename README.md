@@ -1,5 +1,4 @@
 #cashier-TW-homework
----
 
 ###Installation
 确保你安装了golang后执行以下安装命令
